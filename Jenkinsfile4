@@ -1,0 +1,9 @@
+node{
+	stage("readcred"){
+	withCredentials([usernamePassword(credentialsId: 'tomcat_username', passwordVariable: 'tomcatpassword',
+	usernameVariable: 'tomcatusername')]) {
+	  echo "my tomcat username: ${tomcatusername}"
+	  echo "my tomcat userpassword: ${tomcatpassword}"	
+	}
+      }
+  }
