@@ -1,6 +1,10 @@
 node{
-stage("run command"){
-bat "dir"
-
-}
+	stage("run command"){
+		if (isUnix()){
+			sh "ls -lrt"
+		}
+		else{
+		   bat "dir"
+		}
+	}
 }
