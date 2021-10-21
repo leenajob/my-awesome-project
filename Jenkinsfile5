@@ -1,0 +1,6 @@
+node{
+	stage("stage1"){
+	  def obj = null
+	  sh "${obj.class}"
+	}
+}
