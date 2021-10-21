@@ -1,0 +1,16 @@
+node{
+	try {
+	stage("stage1"){
+	  def obj = null
+	  sh "${obj.class}"
+	}
+	}
+	catch {NullPointerException e} {
+	error 'Script failed'
+	}
+	finally {
+	stage("Send email") {
+	mail bcc: '', body: 'Build Status is ${CurrentBuild.result}', cc: '', from: '', replyTo: '', subject:
+	 'Build Status', to: 'leenajobkin@gmail.com'
+	}
+}
