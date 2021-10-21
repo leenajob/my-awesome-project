@@ -1,1 +1,8 @@
-
+node {
+  stage("stage1") {
+    sh'uptime'
+    sh 'pwd'
+    sh 'ls -ltr'
+    sh 'uname'
+  }
+}
