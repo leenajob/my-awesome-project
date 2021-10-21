@@ -5,7 +5,7 @@ node{
 	  sh "${obj.class}"
 	}
 	}
-	catch {NullPointerException e} {
+	catch (NullPointerException e) {
 	error 'Script failed'
 	}
 }
