@@ -1,1 +1,11 @@
+node {
+  stage("stage1") {
+    sh'''
+      uptime'
+      pwd
+      ls -ltr
+      uname
+     '''
+  }
+}
 
